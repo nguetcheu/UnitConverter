@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         myTextView.setText("0");
 
-        View.OnClickListener listerButton = new View.OnClickListener() {
+        View.OnClickListener listenerConversion = new View.OnClickListener() {
             @Override
             public void onClick(View buttonView) {
                 Button button = (Button) buttonView;
@@ -40,11 +40,11 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        myButton.setOnClickListener();
+        myButton.setOnClickListener(listenerConversion);
     }
 
-    Double weightToKg(String weight){
-        double result = Double.parseDouble(weight);
+    Double weightToKg(String weightInKilos){
+        double result = Double.parseDouble(weightInKilos);
         // 1kg = 2.2 Ibs
         if (result == 0.0){
             return 0.0;
